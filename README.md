@@ -5,7 +5,7 @@
 
 If this is a **NEW** installation, clone this repository with the following command:
 
-```git clone https://github.com/asterisktec/MS_Configuration```
+```git clone https://github.com/asterisktec/MS_Configuration.git```
 
 If this is an **existing Monitoring Station**, then simply pull the latest updates with:
 
