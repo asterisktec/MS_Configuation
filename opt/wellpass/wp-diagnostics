@@ -4,7 +4,7 @@
 current_ip=$(hostname -I)
 site=$(cat /opt/wellpass/site_name)
 release=$(cat /opt/wellpass/version)
-TESTING_SERVER=$(cat /opt/wellpass/server_id)
+#TESTING_SERVER=$(cat /opt/wellpass/server_id)
 #
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Not running with sufficient permissions, please use sudo."
