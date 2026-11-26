@@ -12,7 +12,7 @@ fi
 #
 clear
 #
-echo "Beginning WTU update process..."
+echo "Beginning MS update process..."
 echo ""
 echo "Backing up any old configuration"
 echo ""
@@ -45,49 +45,43 @@ echo "Linking menu and other scripts." ; sleep 1
 # remove old links
 # 
 rm /usr/bin/wp-diagnostics
-rm /usr/bin/wp-dataclean
-rm /usr/bin/wp-serverchange
-rm /usr/bin/run_speedtest
 rm /usr/bin/change_sitename
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
-ln -s /opt/wellpass/wp-dataclean /usr/bin/
-ln -s /opt/wellpass/wp-serverchange /usr/bin/
-ln -s /opt/wellpass/run_speedtest /usr/bin/
 ln -s /opt/wellpass/change_sitename /usr/bin/
 #
 # Setting as executable
 #
 echo "Setting executable permissions on scripts." ; sleep 1 
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/wp-serverchange /usr/bin/run_speedtest /usr/bin/change_sitename
+chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename
 #
 # Copy over the webpage
 #
-echo "Copying results viewer web page data." ; sleep 1 
+#echo "Copying results viewer web page data." ; sleep 1 
 #
 # remove old links
 #
-rm /home/wpadmin/http
+#rm /home/wpadmin/http
 #
-ln -s /opt/wellpass/http/ /home/wpadmin/
+#ln -s /opt/wellpass/http/ /home/wpadmin/
 #
 # Copy the results files
 #
-echo "Copying database files to wpadmin home directory." ; sleep 1 
+#echo "Copying database files to wpadmin home directory." ; sleep 1 
 #
-cp /opt/wellpass/results_blank.csv /home/wpadmin/
-cp /opt/wellpass/results.csv /home/wpadmin/
+#cp /opt/wellpass/results_blank.csv /home/wpadmin/
+#cp /opt/wellpass/results.csv /home/wpadmin/
 #
 # Link the archive data folder
 #
-echo "Linking archive data folder directory" ; sleep 1 
+#echo "Linking archive data folder directory" ; sleep 1 
 #
 # remove old links
 #
-rm /home/wpadmin/ARCHIVE_DATA
+#rm /home/wpadmin/ARCHIVE_DATA
 #
-ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
+#ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
 #
 # And lastly, make sure all permissions are set correctly
 #
