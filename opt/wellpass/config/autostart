@@ -1,6 +1,8 @@
-# change url as your needs
-URL="https://10.10.1.70"   # dont put spaces near =
-
+#
+IP_ADDR=$(cat /opt/wellpass/unifi_ip)
+#
+URL="https://$IP_ADDR"   # dont put spaces near =
+#
 xset s on         # disable or enable screensaver
 xset s blank      # blank the screen
 xset s 60         # blank screen after 60 seconds
