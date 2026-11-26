@@ -18,34 +18,11 @@ echo "Moving main files to the /opt folder." ; sleep 1
 #
 cp -r opt /
 #
-# Copy over the new crontab file
-# but backup the old one just to be safe.
-#
-# echo "Backing up old crontab file." ; sleep 1
-#
-# mv /etc/crontab /etc/crontab.bac
-#
-# Copy over the postfix data and crontab
+# Copy over the crontab
 #
 echo "Copying /etc folder to root." ; sleep 1
 #
 cp -r etc /
-#
-# Now lets get the email password
-#
-#echo "You will now need the email sending password..."
-#echo ""
-#read -p "Enter the email password: " email_password
-#
-#email_password="${email_password//[$'\n']/}"
-#
-#printf %s "smtp.mailgun.org raspberrypi_diagnostic@sandboxd9ab5c704d1e4ae9b9c66b3b7f3ac419.mailgun.org:$email_password" > /etc/postfix/sasl_passwd
-#
-# Now to reload Postfix with the new data
-#
-#echo "Updating PostFix Email System." ; sleep 1
-#
-#postmap /etc/postfix/sasl_passwd
 #
 # Linking required menu scripts
 #
@@ -64,33 +41,6 @@ ln -s /opt/wellpass/change_sitename /usr/bin/
 echo "Setting executable permissions on scripts." ; sleep 1
 #
 chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename
-#
-# Copy over the webpage
-#
-#echo "Copying results viewer web data." ; sleep 1
-#
-# remove old links
-#
-#rm /home/wpadmin/http
-#
-#ln -s /opt/wellpass/http/ /home/wpadmin/
-#
-# Copy the results files
-#
-#echo "Copying database files to wpadmin home." ; sleep 1
-#
-#cp /opt/wellpass/results_blank.csv /home/wpadmin/
-#cp /opt/wellpass/results.csv /home/wpadmin/
-#
-# Link the archive data folder
-#
-#echo "Linking archive data folder." ; sleep 1
-#
-# remove old links
-#
-#rm /home/wpadmin/ARCHIVE_DATA
-#
-#ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
 #
 # And lastly, make sure all permissions are set correctly
 #
