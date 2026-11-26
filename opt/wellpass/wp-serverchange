@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Must be run as root or in sudo
+#
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running with sufficient permissions, please use sudo."
+    exit
+fi
+#
+clear
+#
+echo "Listing the nearest servers to your location OR enter your own specific one."
+echo ""
+speedtest -L
+echo ""
+read -p "Enter test server ID or enter your own preferred: " server_number
+#
+# Update the global environment variable
+#
+echo "Updating server environment variable" ; sleep 2
+#
+printf "$server_number" > /opt/wellpass/server_id
+#
+echo "Update complete, test server set to $server_number"
+echo ""
+echo "Returning to main menu ..." ; sleep 2
+#

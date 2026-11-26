@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+clear
+#
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running with sufficient permissions, please use sudo."
+    exit
+fi
+#
+echo "Updating the WTU Site Name"
+echo ""
+read -p "Enter the new site name or location: " sitename
+#
+sitename="${sitename//[$'\n']/}"
+#
+printf "$sitename" > /opt/wellpass/site_name
+#
+echo ""
+echo "Site Name has been updated to $sitename as requested."
+echo "" ; sleep 2
+#
