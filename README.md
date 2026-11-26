@@ -1,5 +1,4 @@
-# MS_Configuation
-WellPass Monitoring Station Configuration
+# WellPass Monitoring Station Configuration
 
 ## Step 1. Clone or Pull
 
