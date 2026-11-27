@@ -7,9 +7,9 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 #
-echo "Updating the WTU Site Name"
+echo "Updating the Monitor Station Name"
 echo ""
-read -p "Enter the new site name or location: " sitename
+read -p "Enter the new name or location: " sitename
 #
 sitename="${sitename//[$'\n']/}"
 #
