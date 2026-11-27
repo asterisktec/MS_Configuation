@@ -18,11 +18,12 @@ CHOICE=$(whiptail --title "- $HOSTNAME - $site -" --ok-button "Run Choice" --can
 "3" "Change Sitename" \
 "4" "Change UniFi Address" \
 "5" "Restart Browser" \
-"6" "PI Process Monitor" \
-"7" "Configure Raspberry-PI" \
-"8" "Update and Upgrade Software" \
-"9" "Shutdown Device" \
-"10" "Reboot Device" 3>&1 1>&2 2>&3) 
+"6" "Clear Browser Cache" \
+"7" "PI Process Monitor" \
+"8" "Configure Raspberry-PI" \
+"9" "Update and Upgrade Software" \
+"10" "Shutdown Device" \
+"11" "Reboot Device" 3>&1 1>&2 2>&3) 
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
@@ -32,11 +33,12 @@ case $CHOICE in
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
 5) sudo -u wpadmin restart_browser ;;
-6) sudo btop ;;
-7) sudo raspi-config ;;
-8) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
-9) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
-10) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
+6) killall chromium ; rm -rf ./cache/chromium/Default/ ; sudo -u wpadmin restart_browser ;;
+7) sudo btop ;;
+8) sudo raspi-config ;;
+9) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
+10) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
+11) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
 esac
 #
 # Return to menu
