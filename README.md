@@ -14,26 +14,12 @@ If this is an **existing Monitoring Station**, then simply pull the latest updat
 ```git pull```
 
 
-## Step 2. Update or Install
+## Step 2. Update
 
 
-
-If this is a **NEW Monitoring Station** ... In the shell run 
+In the shell run
 
 ```cd MS_Configuration```
-
-```sudo ./install.sh```
-
-That will link all of the appropriate files and scipts to the correct places.
-
-**Please make sure that you have the email password ready, as you will be asked during install**
-
-(Hint: It's in 1Password)
-
-
-
-
-If this is an **EXISTING Monitoring Station** ... In the shell run 
 
 ```sudo ./update.sh```
 
