@@ -46,6 +46,7 @@ echo "Linking menu and other scripts." ; sleep 1
 # 
 rm /usr/bin/wp-diagnostics
 rm /usr/bin/change_sitename
+rm /usr/bin/change_unifi
 rm /home/wpadmin/.config/openbox/autostart
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
