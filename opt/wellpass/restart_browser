@@ -7,7 +7,7 @@ URL="https://$IP_ADDR"   # dont put spaces near =
 #
 # Launch Chromium in kiosk mode
 #
-sudo -u wpadmin DISPLAY=:0 chromium --disable-infobars \
+DISPLAY=:0 chromium --disable-infobars \
   --disk-cache-size=1 \
   --disable-pinch \
   --overscroll-history-navigation=0 \
