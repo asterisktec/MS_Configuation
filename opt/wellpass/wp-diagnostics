@@ -17,11 +17,12 @@ CHOICE=$(whiptail --title "- $HOSTNAME - $site -" --ok-button "Run Choice" --can
 "2" "Configure Network Settings" \
 "3" "Change Sitename" \
 "4" "Change UniFi Address" \
-"5" "PI Process Monitor" \
-"6" "Configure Raspberry-PI" \
-"7" "Update and Upgrade Software" \
-"8" "Shutdown Device" \
-"9" "Reboot Device" 3>&1 1>&2 2>&3) 
+"5" "Restart Browser" \
+"6" "PI Process Monitor" \
+"7" "Configure Raspberry-PI" \
+"8" "Update and Upgrade Software" \
+"9" "Shutdown Device" \
+"10" "Reboot Device" 3>&1 1>&2 2>&3) 
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
@@ -30,11 +31,12 @@ case $CHOICE in
 2) nmtui ;;
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
-5) sudo btop ;;
-6) sudo raspi-config ;;
-7) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
-8) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
-9) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
+5) restart_browser ;;
+6) sudo btop ;;
+7) sudo raspi-config ;;
+8) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
+9) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
+10) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
 esac
 #
 # Return to menu
