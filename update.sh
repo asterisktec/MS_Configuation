@@ -49,11 +49,13 @@ rm /usr/bin/change_sitename
 rm /usr/bin/change_unifi
 rm /usr/bin/restart_browser
 rm /home/wpadmin/.config/openbox/autostart
+rm /etc/motd
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/change_sitename /usr/bin/
 ln -s /opt/wellpass/change_unifi /usr/bin/
 ln -s /opt/wellpass/restart_browser /usr/bin/
+ln -s /opt/wellpass/config/motd /etc/
 ln -s /opt/wellpass/config/autostart /home/wpadmin/.config/openbox/
 #
 # Setting as executable
