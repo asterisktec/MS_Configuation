@@ -47,18 +47,20 @@ echo "Linking menu and other scripts." ; sleep 1
 rm /usr/bin/wp-diagnostics
 rm /usr/bin/change_sitename
 rm /usr/bin/change_unifi
+rm /usr/bin/restart_browser
 rm /home/wpadmin/.config/openbox/autostart
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/change_sitename /usr/bin/
 ln -s /opt/wellpass/change_unifi /usr/bin/
+ln -s /opt/wellpass/restart_browser /usr/bin/
 ln -s /opt/wellpass/config/autostart /home/wpadmin/.config/openbox/
 #
 # Setting as executable
 #
 echo "Setting executable permissions on scripts." ; sleep 1 
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename /usr/bin/change_unifi
+chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename /usr/bin/change_unifi /usr/bin/restart_browser
 #
 # And lastly, make sure all permissions are set correctly
 #
@@ -69,7 +71,7 @@ chown wpadmin:wpadmin -R /home/wpadmin/
 #
 systemctl restart cron.service
 #
-echo "Restoring Site Name and Testing Server" ; sleep 1
+echo "Restoring Monitor Server name and configuration" ; sleep 1
 #
 cp /opt/wellpass_old/site_name /opt/wellpass/
 #
