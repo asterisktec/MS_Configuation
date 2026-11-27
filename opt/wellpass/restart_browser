@@ -1,15 +1,18 @@
 #
 killall chromium
 #
+# Get the UniFi device IP
+#
 IP_ADDR=$(cat /opt/wellpass/unifi_ip)
 #
-URL="https://$IP_ADDR"   # dont put spaces near =https://github.com/asterisktec/MS_Configuation/tree/main/opt/wellpass
+# Create the URL
 #
+URL="https://$IP_ADDR"
 #
 # Launch Chromium in kiosk mode
 #
 DISPLAY=:0 chromium --disable-infobars \
-  --disk-cache-size=1 \
+  --disk-cache-size=104857600 \
   --disable-pinch \
   --overscroll-history-navigation=0 \
   --disable-features=MediaSessionService \
