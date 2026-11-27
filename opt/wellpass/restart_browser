@@ -5,9 +5,6 @@ IP_ADDR=$(cat /opt/wellpass/unifi_ip)
 #
 URL="https://$IP_ADDR"   # dont put spaces near =https://github.com/asterisktec/MS_Configuation/tree/main/opt/wellpass
 #
-# Clear caches
-#
-sync && echo 3 | tee /proc/sys/vm/drop_caches
 #
 # Launch Chromium in kiosk mode
 #
