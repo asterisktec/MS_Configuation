@@ -32,7 +32,7 @@ case $CHOICE in
 2) nmtui ;;
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
-5) killall chromium ; tee /proc/sys/vm/drop_caches ; sudo -u wpadmin restart_browser ;;
+5) killall chromium ; sync && echo 3 | tee /proc/sys/vm/drop_caches ; sudo -u wpadmin restart_browser ;;
 6) killall chromium ; rm -rf ./cache/chromium/Default/ ; sync && echo 3 | tee /proc/sys/vm/drop_caches ; sudo -u wpadmin restart_browser ;;
 7) sudo btop ;;
 8) sudo raspi-config ;;
