@@ -31,7 +31,7 @@ case $CHOICE in
 2) nmtui ;;
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
-5) restart_browser ;;
+5) sudo -u wpadmin restart_browser ;;
 6) sudo btop ;;
 7) sudo raspi-config ;;
 8) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
