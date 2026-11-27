@@ -12,4 +12,4 @@ DISPLAY=:0 chromium --disable-infobars \
   --disable-pinch \
   --overscroll-history-navigation=0 \
   --disable-features=MediaSessionService \
-  --kiosk "$URL" &
+  --kiosk "$URL" 3>&1 1>&2 2>&3 &
