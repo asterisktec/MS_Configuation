@@ -24,7 +24,7 @@ x11vnc -display :0 -rfbauth .vnc/passwd -forever -loop -repeat &
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 chromium --disable-infobars \
-  --disk-cache-size=1 \
+  --disk-cache-size=104857600 \
   --disable-pinch \
   --overscroll-history-navigation=0 \
   --disable-features=MediaSessionService \
