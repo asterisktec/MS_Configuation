@@ -30,11 +30,11 @@ case $CHOICE in
 2) nmtui ;;
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
-4) sudo btop ;;
-5) sudo raspi-config ;;
-6) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
-7) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
-8) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
+5) sudo btop ;;
+6) sudo raspi-config ;;
+7) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
+8) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
+9) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
 esac
 #
 # Return to menu
