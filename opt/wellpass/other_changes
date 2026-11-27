@@ -4,7 +4,7 @@
 # Modify the /etc/sudoers file
 wpadmin ALL=(root) NOPASSWD: /usr/bin/wp-diagnostics
 #
-# Modify the .bashrc file
+# Modify the .bashrc_profile file
 #
 sudo /usr/bin/wp-diagnostics
 #
