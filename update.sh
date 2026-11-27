@@ -46,15 +46,18 @@ echo "Linking menu and other scripts." ; sleep 1
 # 
 rm /usr/bin/wp-diagnostics
 rm /usr/bin/change_sitename
+rm /home/wpadmin/.config/openbox/autostart
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/change_sitename /usr/bin/
+ln -s /opt/wellpass/change_unifi /usr/bin/
+ln -s /opt/wellpass/config/autostart /home/wpadmin/.config/openbox/
 #
 # Setting as executable
 #
 echo "Setting executable permissions on scripts." ; sleep 1 
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename
+chmod +x /usr/bin/wp-diagnostics /usr/bin/change_sitename /usr/bin/change_unifi
 #
 # And lastly, make sure all permissions are set correctly
 #
