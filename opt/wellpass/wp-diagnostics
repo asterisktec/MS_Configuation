@@ -16,11 +16,12 @@ CHOICE=$(whiptail --title "- $HOSTNAME - $site -" --ok-button "Run Choice" --can
 "1" "Check WiFi Signal" \
 "2" "Configure Network Settings" \
 "3" "Change Sitename" \
-"4" "PI Process Monitor" \
-"5" "Configure Raspberry-PI" \
-"6" "Update and Upgrade Software" \
-"7" "Shutdown Device" \
-"8" "Reboot Device" 3>&1 1>&2 2>&3) 
+"4" "Change UniFi Address" \
+"5" "PI Process Monitor" \
+"6" "Configure Raspberry-PI" \
+"7" "Update and Upgrade Software" \
+"8" "Shutdown Device" \
+"9" "Reboot Device" 3>&1 1>&2 2>&3) 
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
@@ -28,6 +29,7 @@ case $CHOICE in
 1) wavemon ;;
 2) nmtui ;;
 3) sudo change_sitename ;;
+4) sudo change_unifi ;;
 4) sudo btop ;;
 5) sudo raspi-config ;;
 6) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
