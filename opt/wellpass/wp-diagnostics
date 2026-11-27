@@ -33,7 +33,7 @@ case $CHOICE in
 3) sudo change_sitename ;;
 4) sudo change_unifi ;;
 5) sudo -u wpadmin restart_browser ;;
-6) killall chromium ; rm -rf ./cache/chromium/Default/ ; sudo -u wpadmin restart_browser ;;
+6) killall chromium ; rm -rf ./cache/chromium/Default/ ; sync && echo 3 | tee /proc/sys/vm/drop_caches ; sudo -u wpadmin restart_browser ;;
 7) sudo btop ;;
 8) sudo raspi-config ;;
 9) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
