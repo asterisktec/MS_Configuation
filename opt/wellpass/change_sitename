@@ -17,5 +17,5 @@ printf "$sitename" > /opt/wellpass/site_name
 #
 echo ""
 echo "Site Name has been updated to $sitename as requested."
-echo "" ; sleep 2
+echo "" ; sleep 1
 #
